@@ -1,17 +1,16 @@
 <?php
 
-require_once __DIR__."/utente_non_registrato.php";
-require_once __DIR__."/prodotto.php";
-
 class Carrello{
     public $dati_utente;
     public $prodotti;
     public $totale_elementi;
     public $prezzo_totale;
+    public $registrato;
 
-    function __construct($_dati_utente,$_prodotti)
+    function __construct($_dati_utente,$_registrato,$_prodotti)
     {
         $this->dati_utente = $_dati_utente;
+        $this->registrato = $_registrato;
         $this->prodotti =$_prodotti;
         $this->CalcoloTotaleProdotti();
         $this->CalcoloPrezzoTotale();
@@ -22,8 +21,14 @@ class Carrello{
     }
 
     public function CalcoloPrezzoTotale(){
+        $totale_senza_sconto = 0;
         foreach($this->prodotti as $el){
-            $this->prezzo_totale += $el->prezzo;
+            $totale_senza_sconto += $el->prezzo;
+        };
+        if($this->registrato == true){
+            $this->prezzo_totale = $totale_senza_sconto - ($totale_senza_sconto * 0.20);
+        }else{
+            $this->prezzo_totale = $totale_senza_sconto;
         }
     }
 }
