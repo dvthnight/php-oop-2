@@ -1,17 +1,14 @@
 <?php
-
-require_once __DIR__."/carta_di_credito.php";
-class Utente_registrato{
-    public $nome;
-    public $cognome;
-    public $metodo_pagamento;
+class Employee extends Utente_non_registrato{
+    private $password;
+    private $email;
 
 
-    function __construct($_nome,$_cognome,$_metodo_pagamento)
+    function __construct($_nome,$_cognome,$_metodo_pagamento,$_password,$_email)
     {
-        $this->nome = $_nome;
-        $this->cognome = $_cognome;
-        $this->metodo_pagamento[] = $_metodo_pagamento;
+        parent::__construct($_nome,$_cognome,$_metodo_pagamento);
+        $this->password = $_password;
+        $this->email = $_email;
     }
 }
 
