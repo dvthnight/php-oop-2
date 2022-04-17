@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__."/carta_di_credito.php";
 require_once __DIR__."/carrello.php";
 require_once __DIR__."/ordine.php";
 require_once __DIR__."/prodotto.php";
