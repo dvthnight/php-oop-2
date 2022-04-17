@@ -26,3 +26,14 @@ var_dump($user2_r);
 
 $carrello2 = new Carrello($user2_r,true,[$crocchette_cani,$guinzaglio]);
 var_dump($carrello2);
+
+
+// utente 3
+
+echo "Utente 3";
+
+$user3_r = new Utente_registrato("Gianni","Cyano",$carta3,"dasadPouT0uhju%6","gianni.Cyano@hotmail.com");
+var_dump($user3_r);
+
+$carrello3 = new Carrello($user3_r,true,[$crocchette_gatti,$cuccia_rossa,$pallina,$guinzaglio]);
+var_dump($carrello3);
