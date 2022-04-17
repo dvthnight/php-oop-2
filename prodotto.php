@@ -5,7 +5,7 @@ class Prodotto{
     public $descrizione;
 
 
-    function __construct($_nome,$_prezzo,$_descrizione)
+    function __construct($_nome,int $_prezzo,$_descrizione)
     {
         $this->nome = $_nome;
         $this->prezzo = $_prezzo;
@@ -19,6 +19,6 @@ $crocchette_gatti = new Prodotto("Crocchette per gatti",13,"pacco di crocchette 
 $guinzaglio = new Prodotto("Guinzaglio per cani",10,"Guinzaglio per cani di tutte le taglie");
 $pallina = new Prodotto("Pallina",4,"Pallina per cani e gatti");
 
-var_dump($cuccia_rossa);
-var_dump($crocchette_cani);
-var_dump($pallina);
+// var_dump($cuccia_rossa);
+// var_dump($crocchette_cani);
+// var_dump($pallina);

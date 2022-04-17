@@ -1,12 +1,12 @@
 <?php
-class Employee extends Utente_non_registrato{
+class Utente_registrato extends Utente_non_registrato{
     private $password;
     private $email;
 
 
-    function __construct($_nome,$_cognome,$_metodo_pagamento,$_carrello,$_password,$_email)
+    function __construct($_nome,$_cognome,$_metodo_pagamento,$_password,$_email)
     {
-        parent::__construct($_nome,$_cognome,$_metodo_pagamento,$_carrello);
+        parent::__construct($_nome,$_cognome,$_metodo_pagamento);
         $this->password = $_password;
         $this->email = $_email;
     }
